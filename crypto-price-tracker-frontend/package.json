@@ -1,7 +1,7 @@
 {
   "name": "cryptotracker",
   "version": "1.0.0",
-  "homepage": "/",
+  "homepage": "https://eejump1000.github.io/cryptotracker",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
