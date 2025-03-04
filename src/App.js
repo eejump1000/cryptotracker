@@ -1,1 +1,0 @@
-const response = await axios.get(`http://${window.location.hostname}:5001/api/coins`); 
