@@ -145,3 +145,40 @@ h1 {
 p {
   font-weight: 400; /* Regular */
 }
+
+/* 반응형 테이블 스타일 */
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.responsive-table {
+  width: 100%;
+  min-width: 600px;
+}
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 10px;
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .responsive-table th {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-table th,
+  .responsive-table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

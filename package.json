@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "set HOST=0.0.0.0 && react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "homepage": "https://<your-github-username>.github.io/<your-repo-name>"
+} 

@@ -102,26 +102,28 @@ function App() {
         />
       </header>
       <main>
-        <table>
-          <thead>
-            <tr>
-              <th>Symbol</th>
-              <th>Upbit Price (KRW)</th>
-              <th>Binance Price (USD)</th>
-              <th>김프</th>
-              <th>전일대비</th>
-              <th>7일대비</th>
-              <th>30일대비</th>
-              <th>180일대비</th>
-              <th>360일대비</th>
-            </tr>
-          </thead>
-          <tbody>
-            {coinPrices.map(coin => (
-              <CoinRow key={coin.symbol} coin={coin} />
-            ))}
-          </tbody>
-        </table>
+        <div className="table-container">
+          <table className="responsive-table">
+            <thead>
+              <tr>
+                <th>Symbol</th>
+                <th>Upbit (KRW)</th>
+                <th>Binance (USD)</th>
+                <th>김프</th>
+                <th>1D</th>
+                <th>7D</th>
+                <th>30D</th>
+                <th>180D</th>
+                <th>360D</th>
+              </tr>
+            </thead>
+            <tbody>
+              {coinPrices.map(coin => (
+                <CoinRow key={coin.symbol} coin={coin} />
+              ))}
+            </tbody>
+          </table>
+        </div>
       </main>
       <footer>
         <p>&copy; 2024 Crypto Price Tracker</p>
