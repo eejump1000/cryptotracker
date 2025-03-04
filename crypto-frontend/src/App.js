@@ -95,8 +95,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img
-          src="/Images/header-background-small.jpg"
-          srcSet="/Images/header-background-small.jpg 600w, /Images/header-background-large.jpg 1200w"
+          src="/Images/header-small.jpg"
+          srcSet="/Images/header-small.jpg 600w, /Images/header-large.jpg 1200w"
           alt="Header Background"
           className="header-image"
         />

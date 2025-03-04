@@ -4,26 +4,42 @@ body {
   font-family: 'Roboto', sans-serif; /* Roboto 폰트 적용 */
   background-color: #1e1e2f; /* 어두운 배경 */
   color: #ffffff; /* 밝은 텍스트 */
+  /* 배경 이미지 설정 */
+  background-image: url('/Users/williejoyce/Documents/CursorTest/crypto-frontend/public/Images/background.jpg');
+  background-size: cover; /* 배경 이미지 크기 조정 */
+  background-repeat: no-repeat; /* 배경 이미지 반복 설정 */
+  background-position: center center; /* 배경 이미지 위치 설정 */
 }
 
 .App {
   text-align: center;
-  padding: 20px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* 헤더 스타일 */
 .App-header {
-  position: relative; /* 이미지 요소의 기준점 설정 */
+  position: relative;
   text-align: center;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  height: 200px; /* 데스크탑 기본 높이 */
+  padding: 10px 10px;
+  border-radius: 0;
+  margin-bottom: 10px;
+  margin-top: 20px; /* 상단 여백 추가 */
+  height: 200px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #2c3e50; /* 이미지 로딩 전 배경색 */
-  overflow: hidden; /* 이미지가 넘치지 않도록 설정 */
+  background-color: #2c3e50;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
 }
 
 .header-image {
@@ -42,7 +58,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   background-color: #2c3e50; /* 어두운 테이블 배경 */
-  border-radius: 10px;
+  border-radius: 0px;
   overflow: hidden;
   table-layout: fixed; /* 테이블 레이아웃 고정 */
 }
@@ -63,9 +79,11 @@ th {
 
 /* 푸터 스타일 */
 footer {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 14px;
-  color: #bdc3c7; /* 밝은 회색 */
+  color: #777; /* 밝은 회색에서 어두운 회색으로 변경 */
+  padding: 10px 0;
+  text-align: center; /* 푸터 텍스트 중앙 정렬 명시적으로 지정 */
 }
 
 .App-logo {
@@ -121,7 +139,7 @@ td.price-down {
   }
 
   .App-header {
-    height: 150px; /* 모바일에서 높이 축소 */
+    margin-top: 10px; /* 모바일에서도 상단 여백 유지 (필요에 따라 조절) */
     padding: 15px;
   }
 
@@ -138,6 +156,17 @@ td.price-down {
   }
 }
 
+@media (max-width: 480px) {
+  .App-header {
+    margin-top: 10px; /* 모바일에서도 상단 여백 유지 (필요에 따라 조절) */
+    .responsive-table th,
+    .responsive-table td {
+      padding: 6px;
+      font-size: 12px;
+    }
+  }
+}
+
 h1 {
   font-weight: 700; /* Bold */
 }
@@ -150,35 +179,33 @@ p {
 .table-container {
   overflow-x: auto;
   width: 100%;
-  padding: 0 10px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .responsive-table {
   width: 100%;
   min-width: 600px;
+  margin: 0;
+  border-collapse: collapse;
+  box-sizing: border-box;
 }
 
-/* 모바일 스타일 */
-@media (max-width: 768px) {
-  .App-header {
-    padding: 10px;
-  }
-
-  .responsive-table th,
-  .responsive-table td {
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  .responsive-table th {
-    white-space: nowrap;
-  }
+/* 테이블 th, td 스타일 */
+.responsive-table th,
+.responsive-table td {
+  box-sizing: border-box;
+  padding: 8px;
 }
 
-@media (max-width: 480px) {
-  .responsive-table th,
-  .responsive-table td {
-    padding: 6px;
-    font-size: 12px;
-  }
+/* 메인 콘텐츠 스타일 */
+main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
 }
