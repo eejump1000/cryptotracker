@@ -1,0 +1,147 @@
+/* 기본 스타일 */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Roboto 폰트 적용 */
+  background-color: #1e1e2f; /* 어두운 배경 */
+  color: #ffffff; /* 밝은 텍스트 */
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* 헤더 스타일 */
+.App-header {
+  position: relative; /* 이미지 요소의 기준점 설정 */
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 200px; /* 데스크탑 기본 높이 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2c3e50; /* 이미지 로딩 전 배경색 */
+  overflow: hidden; /* 이미지가 넘치지 않도록 설정 */
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하며 영역 채움 */
+  object-position: center 25%; /* 이미지 상단 정렬 */
+  position: absolute; /* 헤더 영역을 꽉 채우도록 설정 */
+  top: 0;
+  left: 0;
+  z-index: 1; /* 텍스트보다 아래에 위치 */
+}
+
+/* 테이블 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2c3e50; /* 어두운 테이블 배경 */
+  border-radius: 10px;
+  overflow: hidden;
+  table-layout: fixed; /* 테이블 레이아웃 고정 */
+}
+
+th, td {
+  padding: 10px 15px; /* padding 좌우 값을 늘려 간격 조정 */
+  text-align: center;
+  border-bottom: 1px solid #34495e; /* 구분선 */
+  color: #ffffff; /* 기본 텍스트 색상 (흰색) */
+  width: 15%; /* td에도 width 지정 (th와 동일하거나 필요에 따라 조정) */
+}
+
+th {
+  background-color: #34495e; /* 헤더 배경 */
+  font-weight: bold;
+  width: 15%; /* 각 열의 기본 너비 (필요에 따라 조정) */
+}
+
+/* 푸터 스타일 */
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #bdc3c7; /* 밝은 회색 */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 가격 변동폭 색상 스타일 추가 */
+.price-up {
+  color: #4CAF50; /* 부드러운 초록색 */
+}
+
+.price-down {
+  color: #FF5252; /* 부드러운 빨간색 */
+}
+
+/* 가격 등락 셀 배경색 */
+td.price-up {
+  background-color: rgba(76, 175, 80, 0.1); /* 초록색 배경 (투명도 적용) */
+}
+
+td.price-down {
+  background-color: rgba(255, 82, 82, 0.1); /* 빨간색 배경 (투명도 적용) */
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px; /* 폰트 크기 조정 */
+  }
+
+  th, td {
+    padding: 8px; /* 패딩 조정 */
+  }
+
+  .App-header {
+    height: 150px; /* 모바일에서 높이 축소 */
+    padding: 15px;
+  }
+
+  .App-header h1 {
+    font-size: 1.5rem; /* 모바일에서 제목 크기 조정 */
+    line-height: 1.2;
+    position: relative; /* 텍스트를 이미지 위에 표시 */
+    z-index: 2;
+  }
+
+  button {
+    width: 100%; /* 버튼 너비 조정 */
+    padding: 12px; /* 버튼 패딩 조정 */
+  }
+}
+
+h1 {
+  font-weight: 700; /* Bold */
+}
+
+p {
+  font-weight: 400; /* Regular */
+}
