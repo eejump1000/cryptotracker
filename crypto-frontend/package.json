@@ -14,6 +14,11 @@
     "web-vitals": "^2.1.4",
     "yargs-parser": "^20.0.0"
   },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "4.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -40,5 +45,4 @@
       "last 1 safari version"
     ]
   }
-  
 }
