@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
+import headerImage from './Images/header-large.jpg';
 
 // 새로운 유틸리티 함수 추가
 const formatPrice = (price, currency) => {
@@ -95,8 +96,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img
-          src="/Images/header-small.jpg"
-          srcSet="/Images/header-small.jpg 600w, /Images/header-large.jpg 1200w"
+          src={headerImage}
           alt="Header Background"
           className="header-image"
         />
