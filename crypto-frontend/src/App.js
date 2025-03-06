@@ -59,7 +59,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/coins');
+        const response = await axios.get('https://localhost:5001/api/coins');
+
         setCoinPrices(prevPrices => {
           const newPrices = response.data;
           if (JSON.stringify(prevPrices) !== JSON.stringify(newPrices)) {

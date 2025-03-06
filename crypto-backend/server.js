@@ -1,5 +1,8 @@
 const express = require('express');
 const cors = require('cors');
+const http = require('http'); // 기존 HTTP 모듈
+const https = require('https'); // HTTPS 모듈 추가
+const fs = require('fs'); // 파일 시스템 모듈 추가
 
 const app = express();
 const port = 5001; // 또는 다른 포트 번호로 변경
@@ -133,6 +136,20 @@ function getPriceByDate(data, daysAgo) {
   return found ? found.price : null;
 }
 
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+const httpsOptions = { // HTTPS 옵션 설정
+  key: fs.readFileSync(__dirname + '/localhost-key.pem'), // 개인 키 파일 경로 수정
+  cert: fs.readFileSync(__dirname + '/localhost.pem'),     // 인증서 파일 경로 수정
+};
+
+const httpsServer = https.createServer(httpsOptions, app); // HTTPS 서버 생성, 기존 HTTP 앱 사용
+
+const HTTP_PORT = 5000; // HTTP 포트 (필요한 경우)
+const HTTPS_PORT = 5001; // HTTPS 포트
+
+{{/* app.listen(HTTP_PORT, () => { // 기존 HTTP 서버 시작 (필요한 경우)
+  console.log(`HTTP Server listening on port ${HTTP_PORT}`);
+}); */}}
+
+httpsServer.listen(HTTPS_PORT, () => { // HTTPS 서버 시작
+  console.log(`HTTPS Server listening on port ${HTTPS_PORT}`);
 });
